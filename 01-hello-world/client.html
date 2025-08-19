@@ -1,2 +1,24 @@
 <!-- client.html -->
 <!-- Test client for 01-hello-world -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO Hello World</title>
+</head>
+<body>
+  <h1>Open your console!</h1>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on('connect', () => {
+      console.log('Connected to server as:', socket.id);
+      socket.emit('message', 'Hello from client!');
+    });
+
+    socket.on('reply', (msg) => {
+      console.log('Server says:', msg);
+    });
+  </script>
+</body>
+</html>
