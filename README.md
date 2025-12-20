@@ -1,15 +1,7 @@
-# Socket.IO Learning
-Step-by-step learning and experiments with Socket.IO, from basics to real-time applications.
+# Study-Ground
+Step-by-step learning and experiments with different technologies and languages I encounter in my journey of learning Computer Science and all the rest I wanna learn.
+
+- It serves as the note taking ground of my learnings and revision.
 
 ---
 
-## Progress
-- [x] Hello World
-- [ ] Custom Events
-- [ ] Broadcasts and Rooms
-- [ ] Namespaces
-- [ ] Middleware and Auth
-- [ ] Scaling with Redis
-- [ ] Real-time project
-
----
