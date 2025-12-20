@@ -48,3 +48,89 @@ Don't worry about it. It's same like in every other lang.
 
 ---
 
+# METHODS
+
+There are several methods in this lang ranging from: 
+1. String methods
+2. Array methods
+3. Advanced methods
+
+
+
+## String methods:
+Bhai log naam hi kaafi h smjhne k liye plus methods hain so yk kya syntax hoga
+
+```js
+myArray.methodname(parameter if req))
+```
+1. length()
+2. concat()
+3. indexof()
+4. slice()
+5. replace() 
+6. toUpperCase() & toLowerCase()
+7. trim ()
+8. split()
+
+---
+
+## Array methods: 
+
+Mostly same as other languages. Naam hi kaafi h.
+
+1. length
+2. push()
+3. pop()
+4. shift() - `This method is used to remove the first element of an array. For example, the following code will remove the first element (1) from the array`
+5. unshift() - `This method is used to add an element to the beginning of an array. For example, the following code will add the element 0 to the beginning of the array`
+
+6. slice()
+```js
+var myArray = [1, "Hello", [2, 3]];
+console.log(myArray.slice(1, 2)); // ["Hello"]
+```
+7. splice()
+```js
+var myArray = [1, "Hello", [2, 3]];
+myArray.splice(1, 1, "Hello World", [4, 5]);
+console.log(myArray); // [1, "Hello World", [4, 5], [2, 3]]
+```
+---
+
+## Advanced methods
+
+1. map(): Creates a new array changing every existing element as per the given condition or statement. It needs a call back function inside it to know what to do with every element of the array it fetches just like forEach method.
+
+```js
+var myArray = [1, 2, 3, 4, 5]
+var mulArray = myArray.map(function(element) {
+    return element * 2;
+});
+console.log(mulArray);
+```
+--- 
+
+2. filter(): Based on the condtion it filters out the current elements and performs the given operation on it and creates a new array with the results.
+This also requires callback function inside of it.
+
+```js
+var myArray = [1, 2, 3, 4, 5]
+var newArray = myArray.filter(function(element) {
+    return element % 2 == 0;
+})
+```
+
+---
+
+3. reduce(): Based on the given condition, pure k pure array ko concise kr deta h. Again, this also needs a callback functions inside. It takes two parameters accumulator(acc) and current(cur). That 0 in the end is the declaration of initial value of accumulator.
+
+```js
+var myArray = [1, 2, 3, 4, 5];
+var sum = myArray.reduce(function(acc, cur){
+    return acc + cur;
+}, 0);
+
+console.log.(sum)
+```
+
+---
