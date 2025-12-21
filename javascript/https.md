@@ -46,3 +46,16 @@ Once the connection is established, time to make an HTTP request; let's say GET 
 
 ---
 
+## What's an HTTPS request?
+
+This is an secure version of HTTP requests with the support of TLS/SSL which ensures no damage/alternation to the msgs exchange is done. 
+
+When you visit a website that starts with https://, your browser and the server perform a process called the TLS Handshake before any data is exchanged. During this handshake:
+
+1. The browser sends a secure connection request to the server.
+2. The server responds with its digital certificate (issued by a trusted CA or Certificate Authority).
+3. The browser verifies the certificate’s authenticity.
+4. If trusted, both sides agree on an encryption method and generate secure keys for communication.
+
+---
+
