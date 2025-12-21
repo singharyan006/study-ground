@@ -33,3 +33,16 @@ GET /index.html HTTP/1.1
 - `HEAD`: Retrieves only headers of a resource, without the actual content.
 - `PATCH`: Applies partial modifications to a resource.
 - `OPTIONS`: Describes communication options available for a resource.
+
+---
+
+## How does this HTTP thing work?
+When we type in a url in the browser, we are basically instructing it to establish a channel between our system the client and the server which responds to that URL.
+
+When the client tries to look for the service, let's say he puts google.com then the `DNS` uses up the domain to locate the IP of the server and the connection channel between the two is established. Later on, as per the requests (like GET, PUT) the data is fetched from the server.
+
+Once the connection is established, time to make an HTTP request; let's say GET request to which the server responds with the status codes
+> Refer this: [How HTTP request work?](https://www.codecademy.com/article/what-is-http#heading-how-http-requests-work)
+
+---
+
