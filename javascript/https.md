@@ -59,3 +59,12 @@ When you visit a website that starts with https://, your browser and the server 
 
 ---
 
+## KEY Questions to mark
+`1. What is the difference between HTTP and TCP?`
+
+- HTTP is an application-layer protocol that defines how messages are formatted and transferred over the web.
+- TCP is a transport-layer protocol that ensures reliable data delivery between devices.
+
+`2. What is the difference between HTTP request and API request?`
+- An HTTP request is a general request for web resources like pages, images, or scripts, usually made by browsers and returning content for users.
+- An API request is a specific type of HTTP request that targets an API endpoint, typically returning structured data like JSON or XML for use by applications or services.
