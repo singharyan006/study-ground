@@ -1,4 +1,4 @@
-# DESTRUCTURING
+# [Destructuring: Arrays & Objects](https://www.codewithharry.com/tutorial/destructuring-arrays-objects)
 
 A short and beautiful way of extracting the data from the arrays and objects into individual variables.
 
