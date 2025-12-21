@@ -9,7 +9,9 @@ It stands for Hyper Text Transfer Protocol which basically is a set of rules whi
 
 TCP is used to manage many types of internet connections in which one computer or device wants to send something to another. HTTP is the command language that the devices on both sides of the connection must follow in order to communicate.
 
-[Refer this for more info](https://www.codecademy.com/article/what-is-http#heading-what-is-http)
+> Resources here: [Refer this for more info](https://www.codecademy.com/article/what-is-http#heading-what-is-http)
+
+---
 
 ## What's an HTTP Request?
 Basically, request is a strcutured message sent by the client(like applications, API etc) to the server for getting resources like webpage, media and on it goes. The request includes stuff like
@@ -20,3 +22,14 @@ Basically, request is a strcutured message sent by the client(like applications,
 ```http
 GET /index.html HTTP/1.1
 ```
+----
+
+## Types of HTTP Requests
+
+- `GET`: Retrieves data from the server (e.g., loading a webpage).
+- `POST`: Sends data to the server.
+- `PUT`: Updates existing data on the server.
+- `DELETE`: Removes specified data from the server.
+- `HEAD`: Retrieves only headers of a resource, without the actual content.
+- `PATCH`: Applies partial modifications to a resource.
+- `OPTIONS`: Describes communication options available for a resource.
