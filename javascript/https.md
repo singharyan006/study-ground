@@ -11,5 +11,12 @@ TCP is used to manage many types of internet connections in which one computer o
 
 [Refer this for more info](https://www.codecademy.com/article/what-is-http#heading-what-is-http)
 
+## What's an HTTP Request?
+Basically, request is a strcutured message sent by the client(like applications, API etc) to the server for getting resources like webpage, media and on it goes. The request includes stuff like
+1. `request` line(to specify the type of request)
+2. `headers` (for metadata about the request which may include things like `host`, `user-agent`, `Accept`, `Authorization`).
+3. `body` (this includes the data sent to the server. for instance while submitting forms userid and password are sent in this)
 
-
+```http
+GET /index.html HTTP/1.1
+```
