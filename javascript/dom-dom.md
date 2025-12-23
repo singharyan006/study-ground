@@ -77,26 +77,71 @@ allTexts.forEach(element => {
 > 3. HTMLCollection is LIVE (updates automatically), NodeList from querySelectorAll is STATIC (doesn't update)
 
 ---
-let text = document.querySelector(".text"); // By class
-let firstP = document.querySelector("p"); // By tag
-```
 
-### 5. `querySelectorAll()`
-Selects ALL elements that match a CSS selector (returns NodeList)
+## Modifying Elements
+
+### Changing Content
+
+1. `innerHTML`: Gets/sets HTML content inside an element
 
 ```js
-let allTexts = document.querySelectorAll(".text");
-allTexts.forEach(element => {
-    console.log(element);
-});
+let heading = document.getElementById("heading");
+heading.innerHTML = "<strong>New Bold Heading</strong>";
+```
+
+2. `textContent`: Gets/sets text content (ignores HTML tags)
+
+```js
+let heading = document.getElementById("heading");
+heading.textContent = "New Plain Text"; // HTML tags won't work here
+```
+
+3. `innerText`: Similar to textContent but respects CSS styling
+
+```js
+heading.innerText = "Visible Text Only";
 ```
 
 ---
 
-> `Dadaji ne kaha h`
-> 1. `querySelector` and `querySelectorAll` are more modern and flexible. Use them whenever possible because they support all CSS selectors.
-> 2. `getElementById` is faster than querySelector for ID selection, but the performance difference is negligible in most cases.
-> 3. HTMLCollection is LIVE (updates automatically), NodeList from querySelectorAll is STATIC (doesn't update)
+### Changing Attributes
+
+```js
+let link = document.querySelector("a");
+
+// Get attribute
+console.log(link.getAttribute("href"));
+
+// Set attribute
+link.setAttribute("href", "https://google.com");
+
+// Remove attribute
+link.removeAttribute("target");
+
+// Direct property access (modern way)
+link.href = "https://github.com";
+```
+
+---
+
+### Changing Styles
+
+```js
+let box = document.querySelector(".box");
+
+// Inline styles
+box.style.color = "red";
+box.style.backgroundColor = "yellow"; // Note: camelCase for CSS properties
+box.style.fontSize = "20px";
+
+// Add/Remove classes (better practice)
+box.classList.add("active");
+box.classList.remove("hidden");
+box.classList.toggle("dark-mode"); // Adds if not present, removes if present
+box.classList.contains("active"); // Check if class exists (returns true/false)
+```
+
+---
 
 ---
 
