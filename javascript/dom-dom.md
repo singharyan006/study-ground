@@ -629,36 +629,6 @@ clearInterval(intervalId);
 
 ---
 
-// With arrow function
-let timeoutId = setTimeout(() => {
-    console.log("Delayed message");
-}, 3000);
-
-// Cancel timeout
-clearTimeout(timeoutId);
-```
-
-### setInterval
-Executes code repeatedly at intervals
-
-```js
-// Basic usage
-let counter = 0;
-let intervalId = setInterval(function() {
-    counter++;
-    console.log("Counter: " + counter);
-    
-    if (counter === 5) {
-        clearInterval(intervalId); // Stop after 5 times
-    }
-}, 1000); // Every 1 second
-
-// Cancel interval
-clearInterval(intervalId);
-```
-
----
-
 ## Local Storage & Session Storage
 
 Store data in the browser (persists even after closing browser)
@@ -718,6 +688,19 @@ Small pieces of data stored in the browser (sent with every HTTP request)
 document.cookie = "username=Aryan";
 document.cookie = "age=25; expires=Fri, 31 Dec 2025 23:59:59 GMT";
 document.cookie = "token=abc123; path=/; secure; samesite=strict";
+
+// Get all cookies (returns string)
+console.log(document.cookie); // "username=Aryan; age=25; token=abc123"
+
+// Delete cookie (set expiry to past date)
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+```
+
+---
+
+> Note: Working with cookies directly is tedious. Consider using libraries or the more modern localStorage/sessionStorage APIs for client-side storage.
+
+---
 
 // Get all cookies (returns string)
 console.log(document.cookie); // "username=Aryan; age=25; token=abc123"
@@ -794,4 +777,4 @@ document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
 ---
 
-**That's it fam! You're now ready to manipulate DOM like a pro and use BOM features effectively!**
+**That's it fam! Kuchh jyada hi lmba hogya but you're now ready to manipulate DOM like a pro and use BOM features effectively!**
