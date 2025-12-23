@@ -16,8 +16,67 @@ DOM is basically a programming interface for HTML and XML documents. Think of it
 </html>
 ```
 
+---
+
+## Selecting Elements
+
+There are multiple ways to select elements from the DOM:
+
+### 1. `getElementById()`
+Selects an element by its ID (returns a single element)
+
+```js
+let heading = document.getElementById("heading");
+console.log(heading); // <h1 id="heading">Hello World</h1>
+```
+
+### 2. `getElementsByClassName()`
+Selects all elements with a specific class (returns HTMLCollection)
+
+```js
+let texts = document.getElementsByClassName("text");
+console.log(texts[0]); // First element with class "text"
+```
+
+### 3. `getElementsByTagName()`
+Selects all elements with a specific tag name (returns HTMLCollection)
+
+```js
+let paragraphs = document.getElementsByTagName("p");
+console.log(paragraphs); // All <p> elements
+```
+
+### 4. `querySelector()`
+Selects the FIRST element that matches a CSS selector
+
+```js
+### 4. `querySelector()`
+Selects the FIRST element that matches a CSS selector
+
 ```js
 let heading = document.querySelector("#heading"); // By ID
+let text = document.querySelector(".text"); // By class
+let firstP = document.querySelector("p"); // By tag
+```
+
+### 5. `querySelectorAll()`
+Selects ALL elements that match a CSS selector (returns NodeList)
+
+```js
+let allTexts = document.querySelectorAll(".text");
+allTexts.forEach(element => {
+    console.log(element);
+});
+```
+
+---
+
+> `Dadaji ne kaha h`
+> 1. `querySelector` and `querySelectorAll` are more modern and flexible. Use them whenever possible because they support all CSS selectors.
+> 2. `getElementById` is faster than querySelector for ID selection, but the performance difference is negligible in most cases.
+> 3. HTMLCollection is LIVE (updates automatically), NodeList from querySelectorAll is STATIC (doesn't update)
+
+---
 let text = document.querySelector(".text"); // By class
 let firstP = document.querySelector("p"); // By tag
 ```
