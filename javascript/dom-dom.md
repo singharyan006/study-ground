@@ -259,27 +259,6 @@ element.parentNode.removeChild(element);
 
 ---
 
-// insertBefore: Insert before a specific element
-let referenceElement = document.querySelector(".reference");
-container.insertBefore(newDiv, referenceElement);
-```
-
----
-
-## Removing Elements
-
-```js
-let element = document.querySelector(".remove-me");
-
-// Modern way
-element.remove();
-
-// Old way (still works)
-element.parentNode.removeChild(element);
-```
-
----
-
 ## Event Handling
 
 Events are actions that happen in the browser (clicks, key presses, mouse movements, etc.)
@@ -335,6 +314,36 @@ button.addEventListener("click", function(event) {
     event.stopPropagation(); // Stop event bubbling
 });
 ```
+
+---
+
+## DOM Traversal
+
+Moving around the DOM tree from one element to another
+
+```js
+let element = document.querySelector(".child");
+
+// Parent
+console.log(element.parentElement); // Direct parent
+console.log(element.parentNode); // Can be any node type
+
+// Children
+console.log(element.children); // All child elements
+console.log(element.firstElementChild); // First child element
+console.log(element.lastElementChild); // Last child element
+
+// Siblings
+console.log(element.nextElementSibling); // Next sibling element
+console.log(element.previousElementSibling); // Previous sibling element
+```
+
+---
+
+> `Dadaji ne kaha h`
+> 1. Always check if an element exists before manipulating it to avoid errors
+> 2. Use `addEventListener` instead of `onclick` because you can attach multiple listeners
+> 3. Practice event delegation for better performance when dealing with many elements
 
 ---
 
