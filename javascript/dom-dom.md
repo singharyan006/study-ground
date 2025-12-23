@@ -259,6 +259,27 @@ element.parentNode.removeChild(element);
 
 ---
 
+// insertBefore: Insert before a specific element
+let referenceElement = document.querySelector(".reference");
+container.insertBefore(newDiv, referenceElement);
+```
+
+---
+
+## Removing Elements
+
+```js
+let element = document.querySelector(".remove-me");
+
+// Modern way
+element.remove();
+
+// Old way (still works)
+element.parentNode.removeChild(element);
+```
+
+---
+
 ## Event Handling
 
 Events are actions that happen in the browser (clicks, key presses, mouse movements, etc.)
