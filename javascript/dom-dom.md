@@ -347,36 +347,6 @@ console.log(element.previousElementSibling); // Previous sibling element
 
 ---
 
-## DOM Traversal
-
-Moving around the DOM tree from one element to another
-
-```js
-let element = document.querySelector(".child");
-
-// Parent
-console.log(element.parentElement); // Direct parent
-console.log(element.parentNode); // Can be any node type
-
-// Children
-console.log(element.children); // All child elements
-console.log(element.firstElementChild); // First child element
-console.log(element.lastElementChild); // Last child element
-
-// Siblings
-console.log(element.nextElementSibling); // Next sibling element
-console.log(element.previousElementSibling); // Previous sibling element
-```
-
----
-
-> `Dadaji ne kaha h`
-> 1. Always check if an element exists before manipulating it to avoid errors
-> 2. Use `addEventListener` instead of `onclick` because you can attach multiple listeners
-> 3. Practice event delegation for better performance when dealing with many elements
-
----
-
 # BOM (Browser Object Model)
 
 ## Definition
@@ -398,6 +368,82 @@ console.log("Hello");
 window.alert("Hi!");
 alert("Hi!");
 ```
+
+---
+
+## Window Properties
+
+### Window Dimensions
+
+```js
+// Inner dimensions (excluding browser UI)
+console.log(window.innerWidth); // Width of viewport
+console.log(window.innerHeight); // Height of viewport
+
+// Outer dimensions (including browser UI)
+console.log(window.outerWidth);
+console.log(window.outerHeight);
+```
+
+### Screen Information
+
+```js
+console.log(screen.width); // Total screen width
+console.log(screen.height); // Total screen height
+console.log(screen.availWidth); // Available width (excluding taskbar)
+console.log(screen.availHeight); // Available height
+```
+
+---
+
+## Window Methods
+
+### Alert, Confirm, Prompt
+
+```js
+// Alert: Shows a message
+window.alert("This is an alert!");
+
+// Confirm: Shows yes/no dialog (returns true/false)
+let result = window.confirm("Are you sure?");
+if (result) {
+    console.log("User clicked OK");
+} else {
+    console.log("User clicked Cancel");
+}
+
+// Prompt: Gets user input (returns string or null)
+let name = window.prompt("What's your name?", "Default Name");
+console.log(name);
+```
+
+### Opening and Closing Windows
+
+```js
+// Open new window
+let newWindow = window.open("https://google.com", "_blank", "width=500,height=400");
+
+// Close window (only works for windows opened by script)
+newWindow.close();
+```
+
+### Scrolling
+
+```js
+// Scroll to specific position
+window.scrollTo(0, 500); // x, y coordinates
+
+// Scroll by amount
+window.scrollBy(0, 100); // Scroll down 100px
+
+// Smooth scrolling
+window.scrollTo({
+    top: 500,
+    behavior: "smooth"
+});
+```
+
+---
 
 ---
 
