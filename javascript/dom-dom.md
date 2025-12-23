@@ -629,6 +629,36 @@ clearInterval(intervalId);
 
 ---
 
+// With arrow function
+let timeoutId = setTimeout(() => {
+    console.log("Delayed message");
+}, 3000);
+
+// Cancel timeout
+clearTimeout(timeoutId);
+```
+
+### setInterval
+Executes code repeatedly at intervals
+
+```js
+// Basic usage
+let counter = 0;
+let intervalId = setInterval(function() {
+    counter++;
+    console.log("Counter: " + counter);
+    
+    if (counter === 5) {
+        clearInterval(intervalId); // Stop after 5 times
+    }
+}, 1000); // Every 1 second
+
+// Cancel interval
+clearInterval(intervalId);
+```
+
+---
+
 ## Local Storage & Session Storage
 
 Store data in the browser (persists even after closing browser)
